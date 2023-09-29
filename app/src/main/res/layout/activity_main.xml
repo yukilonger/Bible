@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SurfaceView
+        android:id="@+id/player"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        tools:ignore="MissingConstraints" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="30dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="8dp">
+            <TextView android:id="@+id/title" android:text="旧 约" android:textSize="20sp" android:textAlignment="center" android:layout_weight="1"/>
+            <TextView android:text="新 约" android:textSize="20sp" android:textAlignment="center" android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView android:layout_weight="1" >
+                <LinearLayout android:id="@+id/olds" android:orientation="vertical" android:layout_height="match_parent" android:layout_width="match_parent"/>
+            </ScrollView>
+            <ScrollView android:layout_weight="1" >
+                <LinearLayout android:id="@+id/news" android:orientation="vertical" android:layout_height="match_parent" android:layout_width="match_parent"/>
+            </ScrollView>
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
